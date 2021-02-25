@@ -41,9 +41,14 @@
   text-align: center;
 }
 
+.stock-page{
+  text-align: center;
+  justify-content: center;
+}
+
 .item img{
-  height: 25vh;
-  min-width: 15vw;
+  height: 20vh;
+  min-width: 12vw;
   padding: 5px 5px 5px 5px;
 }
 
