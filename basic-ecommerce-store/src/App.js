@@ -20,6 +20,7 @@ const App = () => {
       <Cart cartTotal={setTotal}/>
       {/* <ShoppingCartIcon onClick = {()=> <Cart cartTotal={setTotal}/> } /> */}
         {/* above needs to change such that on Click, cart appears */}
+      <h4>Created by Aimee Liang, 2021</h4>
     </>
   );
 }

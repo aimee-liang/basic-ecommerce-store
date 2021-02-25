@@ -7,11 +7,9 @@ const Stock = (props) => {
         return props.UpdateTotal
     }
     return (
-        <>
-            <div className="stock-page">
-                <Item onClick = {localUpdate}/>
-            </div>
-        </>
+        <div className="stock-page">
+            <Item onClick = {localUpdate}/>
+        </div>
     )
 }
 
