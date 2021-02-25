@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState} from "react"
-// import Logo from "Logo"
+import Logo from "./Logo"
 import Cart from "./Cart/Cart"
 import Stock from "./Items/Stock"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <>
-      {/* <Logo /> */}
+      <Logo />
       <Stock updateTotal={updateTotal}/>
       <Cart cartTotal={setTotal}/>
       {/* <ShoppingCartIcon onClick = {()=> <Cart cartTotal={setTotal}/> } /> */}
