@@ -18,7 +18,7 @@ const App = () => {
       <Cart cartTotal={setTotal}/>
       {/* <ShoppingCartIcon onClick = {()=> <Cart cartTotal={setTotal}/> } /> */}
         {/* above needs to change such that on Click, cart appears */}
-      <h4><a href="https://aimeeliang.com">Website design by Aimee Liang</a></h4>
+      <h4>Website design by <a href="https://aimeeliang.com">Aimee Liang</a></h4>
     </>
   );
 }
