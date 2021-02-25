@@ -37,6 +37,10 @@
   }
 }
 
+.logo-image {
+  text-align: center;
+}
+
 .item img{
   height: 25vh;
   min-width: 15vw;
