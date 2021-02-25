@@ -4,7 +4,7 @@ import Item from "./Item.js"
 const Stock = (props) => {
 
     const localUpdate = (item) => {
-        return props.UpdateTotal
+        return props.updateTotal
     }
     return (
         <div className="stock-page">

@@ -20,7 +20,7 @@ const Item = (props) => {
             </div>
 
             <div className="item">
-                <h3>Lapis Lazuli Bangles</h3>
+                <h3>Silver Bangles</h3>
                 <img src="/pexels-photo-1191536.jpeg" alt="jewelry piece"/>
                 <h5>$65.50</h5>
                 <Button variant="contained" onClick={props.localUpdate}>Click to purchase</Button>

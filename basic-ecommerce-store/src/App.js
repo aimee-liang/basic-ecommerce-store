@@ -7,9 +7,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const App = () => {
 
-  const [total, setTotal] = useState([]) /* should this be an object and not an array? */
-
-  /* is each item in array an object? */
+  const [total, setTotal] = useState([]) 
 
   const updateTotal = (item) => setTotal([...item]) /* have count included? */
 
@@ -20,7 +18,7 @@ const App = () => {
       <Cart cartTotal={setTotal}/>
       {/* <ShoppingCartIcon onClick = {()=> <Cart cartTotal={setTotal}/> } /> */}
         {/* above needs to change such that on Click, cart appears */}
-      <h4>Created by Aimee Liang, 2021</h4>
+      <h4><a href="https://aimeeliang.com">Website design by Aimee Liang</a></h4>
     </>
   );
 }
