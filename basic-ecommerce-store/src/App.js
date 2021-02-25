@@ -17,8 +17,9 @@ const App = () => {
     <>
       {/* <Logo /> */}
       <Stock updateTotal={updateTotal}/>
-      {/* <Cart cartTotal={setTotal}/> */}
-      <ShoppingCartIcon onClick = {()=> <Cart cartTotal={setTotal}/> } />
+      <Cart cartTotal={setTotal}/>
+      {/* <ShoppingCartIcon onClick = {()=> <Cart cartTotal={setTotal}/> } /> */}
+        {/* above needs to change such that on Click, cart appears */}
     </>
   );
 }
