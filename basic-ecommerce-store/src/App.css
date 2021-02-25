@@ -41,9 +41,15 @@
   text-align: center;
 }
 
+.logo-image img {
+  height: 20vh;
+  width: 15vw;
+}
+
 .stock-page{
   text-align: center;
   justify-content: center;
+  margin: auto;
 }
 
 .item img{
@@ -52,7 +58,8 @@
   padding: 5px 5px 5px 5px;
 }
 
-.stock-page{
-  display: flex;
-  margin: auto;
+@media only screen and (min-width: 600px){
+  .stock-page{
+    display: flex;
+  }
 }
