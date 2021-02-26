@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const stripe = require('stripe')('sk_test_51IIKpuG5DSaF9r7jz8YAOzk3E7GrtTXprJceOF1tAf33ISoGWokDTPsfuiTcjktT5dLk7SHs79fpVt5IDcxBwVPn00hclj6ir2'); // Add your Secret Key Here
+const stripe = require('stripe')('sk_test_51IIKpuG5DSaF9r7jz8YAOzk3E7GrtTXprJceOF1tAf33ISoGWokDTPsfuiTcjktT5dLk7SHs79fpVt5IDcxBwVPn00hclj6ir2');
 
 const app = express();
 
@@ -15,6 +15,9 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, './views')));
 
 // Future Code Goes Here
+app.post('/charge', (req, res) => {
+    
+})
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server is running...'));
