@@ -25,7 +25,7 @@ app.post('/charge', (req, res) => {
             })
             .then(customer => 
                 stripe.charges.create({
-                    amount: req.body.amount * amount * 100,
+                    amount: req.body.amount * 100,
                     currency: "usd",
                     customer : customer.id
                 })
