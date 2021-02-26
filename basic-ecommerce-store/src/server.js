@@ -23,7 +23,17 @@ app.post('/charge', (req, res) => {
                 email: req.body.email,
                 source: req.body.stripeToken
             })
-            .then(customer => )
+            .then(customer => 
+                stripe.charges.create({
+                    amount: req.body.amount * amount * 100,
+                    currency: "usd",
+                    customer : customer.id
+                })
+            )
+            .then(() => res.render("completed html"))
+            .catch(err => console.log(err))
+    } catch(err){
+        res.send(err)
     }
 })
 
