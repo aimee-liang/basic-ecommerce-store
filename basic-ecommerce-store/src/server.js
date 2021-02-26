@@ -16,7 +16,15 @@ app.use(express.static(path.join(__dirname, './views')));
 
 // Future Code Goes Here
 app.post('/charge', (req, res) => {
-    
+    try {
+        stripe.customers
+            .create({
+                name: req.body.name,
+                email: req.body.email,
+                source: req.body.stripeToken
+            })
+            .then(customer => )
+    }
 })
 
 const port = process.env.PORT || 3000;
