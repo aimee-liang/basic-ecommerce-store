@@ -5,9 +5,7 @@ import {loadStripe} from "@stripe/stripe-js"
 
 const CardInfo = () => {
 
-    // const [payment, setPayment] = useState([])
     const stripePromise = loadStripe("pk_test_51IIKpuG5DSaF9r7j6sxZCK0tppgqaztwXBxuHnJLx2Y8RvgWzpciJeLFT0P1wrd4fZZGH5bMAsp0JdvzTBrpuCqr00m23vKKZ8")
-    // const elements = stripe.elements()
 
     return(
         <div className="card-info-terminal">
