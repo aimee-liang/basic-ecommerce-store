@@ -4,9 +4,6 @@ import CartItem from "./CartItem"
 
 const Cart = (props) => {
 
-    /* use State here to show the cart */
-    // const [display, setDisplay] = useState(false)
-
     /* calculate total and pass to CartItem
     const calculateTotal = () => {
 

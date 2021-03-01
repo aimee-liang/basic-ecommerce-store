@@ -16,7 +16,7 @@ const App = () => {
     <>
       <Logo />
       <Stock updateTotal={updateTotal}/>
-      <Cart cartTotal={setTotal} cartDisplay={...cartDisplay}/>
+      <Cart cartTotal={setTotal} cartDisplay={cartDisplay}/>
       <ShoppingCartIcon onClick = {()=> setCartDisplay(true)} />
       <h4>Website design by <a href="https://aimeeliang.com">Aimee Liang</a></h4>
     </>
