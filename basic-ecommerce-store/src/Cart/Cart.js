@@ -22,16 +22,24 @@ const Cart = (props) => {
     // const decreaseQuantity = () => decrease quantity
 
     return (
-        <div className="cart">
-            <h2>Your Cart</h2>
-            {props.cartTotal.length ? <p>Your cart is empty</p> : null}
-            {/* {props.cartTotal.map((item, index) => {
-                return <CartItem key = {index} item = {item} />
-            })} */}
-            {/* calculate total */}
-            <h2>Total: $</h2>
-            <CardInfo/>
-        </div>
+        <>
+        {props.setCartDisplay ? 
+
+                <div className="cart">
+                <h2>Your Cart</h2>
+                {props.cartTotal.length ? <p>Your cart is empty</p> : null}
+                {/* {props.cartTotal.map((item, index) => {
+                    return <CartItem key = {index} item = {item} />
+                })} */}
+                {/* calculate total */}
+                <h2>Total: $</h2>
+                <CardInfo/>
+                </div>
+
+                :
+                null
+        }
+        </>
     )
 }
 
