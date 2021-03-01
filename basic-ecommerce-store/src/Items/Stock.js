@@ -8,7 +8,7 @@ const Stock = (props) => {
     }
     return (
         <div className="stock-page">
-            <Item onClick = {localUpdate}/>
+            <Item localUpdate={localUpdate} />
         </div>
     )
 }
