@@ -37,13 +37,24 @@ app.post('/checkout', async (req, res) => {
                 address: {
                     line1: token.card.address_line1,
                     line2: token.card.address_line2,
-                    city: 
+                    city: token.card.address_city,
+                    country: token.card.address_country,
+                    postal_code: token.card.address_zip
                 }
             }
-        })
+        },
+        {
+            idempotency_key
+        }
+        )
+        console.log("Charge:", {charge});
+        status = "success"
+    } catch (error){
+        console.error("Error:", error)
+        status="failure"
     }
 
+    res.json({error, status})
 })
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log('Server is running...'));
+app.listen(8080)

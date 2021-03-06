@@ -4,7 +4,7 @@ import Item from "../Items/Item"
 
 
 const handleToken = (token, addresses) => {
-
+    // axios?
 }
 
 const CheckOutForm = () => {
