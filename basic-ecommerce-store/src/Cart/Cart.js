@@ -16,10 +16,13 @@ const Cart = (props) => {
     const clearCart = () => {
         setCart(cart.length === 0)
     }
-
     */
 
-    // const increaseQuantity = () => increase quantity
+    /* const increaseQuantity = () => {
+        
+    }
+
+    */
 
     // const decreaseQuantity = () => decrease quantity
 
