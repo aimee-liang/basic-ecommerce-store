@@ -28,18 +28,12 @@ const Cart = (props) => {
 
     return (
         <>
-        {/* {props.setCartDisplay ? 
-
-                <div className="cart">
-                <h2>Your Cart</h2>
-                {props.cartTotal.length ? <p>Your cart is empty</p> : null}
-                <h2>Total: $</h2>
-                <CardInfo/>
-                </div>
-
-                :
-                null
-        } */}
+            <div className="cart">
+            <h2>Your Cart</h2>
+            {props.cartTotal.length ? <p>Your cart is empty</p> : null}
+            <h2>Total: $</h2>
+            <CardInfo/>
+            </div>
         </>
     )
 }
