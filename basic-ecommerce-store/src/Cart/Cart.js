@@ -1,8 +1,10 @@
-import React from "react"
+import React, {useState} from "react"
 import CardInfo from "./CardInfo"
 import CartItem from "./CartItem"
 
 const Cart = (props) => {
+    
+    const [cart, setCart] = useState([])
 
     /* calculate total and pass to CartItem
     const calculateTotal = () => {
@@ -12,7 +14,7 @@ const Cart = (props) => {
 
     /* clears cart 
     const clearCart = () => {
-
+        setCart(cart.length === 0)
     }
 
     */
