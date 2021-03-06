@@ -19,6 +19,7 @@ const App = () => {
       <Cart cartTotal={setTotal}/>
       {/* <ShoppingCartIcon onClick={() => setCartDisplay(true)} /> */}
       <h4>Website design by <a href="https://aimeeliang.com">Aimee Liang</a></h4>
+      <h5>Please note this is a demo app. Do not enter your actual payment information.</h5>
     </>
   );
 }

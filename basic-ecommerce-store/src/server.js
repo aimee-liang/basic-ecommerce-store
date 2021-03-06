@@ -1,40 +1,48 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+const cors = require('cors');
 const stripe = require('stripe')('sk_test_51IIKpuG5DSaF9r7jz8YAOzk3E7GrtTXprJceOF1tAf33ISoGWokDTPsfuiTcjktT5dLk7SHs79fpVt5IDcxBwVPn00hclj6ir2');
+const uuid= require("uuid/v4");
+const { default: Item } = require('./Items/Item');
+// const path = require('path');
 
 const app = express();
 
-// This will make our form data much more useful
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
+app.use(cors())
 
-// This will set express to render our views folder, then to render the files as normal html
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+app.get('/', (req, res) => {
+    res.send("Add your Stripe Secret Key to the .require("stripe") statement!") 
+})
 
-app.use(express.static(path.join(__dirname, './views')));
+app.post('/checkout', async (req, res) => {
+    console.log("Request:", req.body)
+    let error;
+    let status;
 
-// Future Code Goes Here
-app.post('/charge', (req, res) => {
     try {
-        stripe.customers
-            .create({
-                name: req.body.name,
-                email: req.body.email,
-                source: req.body.stripeToken
-            })
-            .then(customer => 
-                stripe.charges.create({
-                    amount: req.body.amount * 100,
-                    currency: "usd",
-                    customer : customer.id
-                })
-            )
-            .then(() => res.render("completed html"))
-            .catch(err => console.log(err))
-    } catch(err){
-        res.send(err)
+        const {product, token} = req.body
+        const customer = await 
+        stripe.customers.create({
+            email: token.email,
+            source: token.id
+        })
+        const idempotency_key = uuid()
+        const charge = await stripe.charges.create({
+            amount: Item.price * 100,
+            customer: customer.id,
+            receipt_email: token.email,
+            description: "Thank you for purchasing the ${Item.name}",
+            shipping: {
+                name: token.card.name,
+                address: {
+                    line1: token.card.address_line1,
+                    line2: token.card.address_line2,
+                    city: 
+                }
+            }
+        })
     }
+
 })
 
 const port = process.env.PORT || 3000;
