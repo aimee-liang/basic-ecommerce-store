@@ -3,7 +3,6 @@ const cors = require('cors');
 const stripe = require('stripe')('sk_test_51IIKpuG5DSaF9r7jz8YAOzk3E7GrtTXprJceOF1tAf33ISoGWokDTPsfuiTcjktT5dLk7SHs79fpVt5IDcxBwVPn00hclj6ir2');
 const uuid= require("uuid/v4");
 const { default: Item } = require('./Items/Item');
-// const path = require('path');
 
 const app = express();
 
