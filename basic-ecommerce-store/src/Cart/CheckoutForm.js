@@ -5,7 +5,10 @@ import axios from "axios"
 
 
 const handleToken = (token, addresses) => {
-    axios()
+    const url="http://localhost:8080"    
+    const getStripe = () => {
+        axios(get)
+    }
 }
 
 const CheckOutForm = () => {
