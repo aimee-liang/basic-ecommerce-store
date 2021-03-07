@@ -1,10 +1,11 @@
 import React from "react"
 import StripeCheckout from 'react-stripe-checkout'
 import Item from "../Items/Item"
+import axios from "axios"
 
 
 const handleToken = (token, addresses) => {
-    // axios?
+    axios()
 }
 
 const CheckOutForm = () => {
