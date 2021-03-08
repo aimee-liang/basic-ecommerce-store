@@ -4,6 +4,7 @@ import Item from "../Items/Item"
 import axios from "axios"
 import { toast } from "react-toastify"
 
+toast.configure()
 
 const handleToken = (token, addresses) => {
     const response = await axios.post(
