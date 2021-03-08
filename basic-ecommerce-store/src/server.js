@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const stripe = require('stripe')('sk_test_51IIKpuG5DSaF9r7jz8YAOzk3E7GrtTXprJceOF1tAf33ISoGWokDTPsfuiTcjktT5dLk7SHs79fpVt5IDcxBwVPn00hclj6ir2');
 const uuid= require("uuid/v4");
-const { default: Item } = require('./Items/Item');
+// const { default: Item } = require('./Items/Item');
 
 const app = express();
 
@@ -19,9 +19,8 @@ app.post('/checkout', async (req, res) => {
     let status;
 
     try {
-        const {product, token} = req.body
-        const customer = await 
-        stripe.customers.create({
+        const {item, token} = req.body
+        const customer = await stripe.customers.create({
             email: token.email,
             source: token.id
         })
