@@ -2,12 +2,20 @@ import React from "react"
 import StripeCheckout from 'react-stripe-checkout'
 import Item from "../Items/Item"
 import axios from "axios"
+import { toast } from "react-toastify"
 
 
 const handleToken = (token, addresses) => {
-    const url="http://localhost:8080"    
-    const getStripe = () => {
-        axios.get()
+    const response = await axios.post(
+        "http://localhost:8080", /* other link here? */
+        {token, item}
+    )
+    const {status} = response.data
+    console.log("Response:", response.data)
+    if (status === "Success"){
+        toast("Please check your email for receipt and shipping info!", {type: "success"} )
+    } else {
+        toast("Your purchase was not complete. Please check your card information and try again", {type: "error"})
     }
 }
 
