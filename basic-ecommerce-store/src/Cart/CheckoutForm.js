@@ -6,10 +6,10 @@ import { toast } from "react-toastify"
 
 toast.configure()
 
-const handleToken = (token, addresses) => {
+async function handleToken(token, addresses){
     const response = await axios.post(
         "http://localhost:8080", /* other link here? */
-        {token, item}
+        {token, Item}
     )
     const {status} = response.data
     console.log("Response:", response.data)
