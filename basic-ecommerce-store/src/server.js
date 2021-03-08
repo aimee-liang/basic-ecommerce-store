@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send("Add your Stripe Secret Key to the .require("stripe") statement!")
+    res.send("Add your Stripe Secret Key to the .require('stripe') statement!")
 })
 
 app.post('/checkout', async (req, res) => {
@@ -30,7 +30,7 @@ app.post('/checkout', async (req, res) => {
             currency: "usd",
             customer: customer.id,
             receipt_email: token.email,
-            description: "Thank you for purchasing the ${item.name}",
+            description: `Thank you for purchasing the ${item.name}`,
             shipping: {
                 name: token.card.name,
                 address: {
