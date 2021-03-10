@@ -12,11 +12,9 @@ const Cart = (props) => {
     }
      */
 
-    /* clears cart 
     const clearCart = () => {
-        setCart(cart.length === 0)
+        setCart([cart.length === 0])
     }
-    */
 
     /* const increaseQuantity = () => {
         
@@ -29,10 +27,11 @@ const Cart = (props) => {
     return (
         <>
             <div className="cart">
-            <h2>Your Cart</h2>
-            {props.cartTotal.length ? <p>Your cart is empty</p> : null}
-            <h2>Total: $</h2>
-            <CardInfo/>
+                <h2>Your Cart</h2>
+                {/* {props.cartTotal.length ? <p>Your cart is empty</p> : null} */}
+                <h2>Total: $</h2>
+                <CardInfo/>
+                <button onClick={this.clearCart}>Clear cart</button>
             </div>
         </>
     )

@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button"
 const CartItem = (props) => {
 
     const localRemove = () => {
-        // props.clearCart()
+        // props.removeItem
         return <p>"You've removed this item from your cart</p>
     }
 
