@@ -31,7 +31,7 @@ const Cart = (props) => {
                 {/* {props.cartTotal.length ? <p>Your cart is empty</p> : null} */}
                 <h2>Total: $</h2>
                 <CardInfo/>
-                <button onClick={this.clearCart}>Clear cart</button>
+                <button onClick={() => clearCart}>Clear cart</button>
             </div>
         </>
     )
