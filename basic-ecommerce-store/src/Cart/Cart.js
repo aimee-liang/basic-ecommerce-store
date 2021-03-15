@@ -27,11 +27,14 @@ const Cart = (props) => {
     return (
         <>
             <div className="cart">
-                <h2>Your Cart</h2>
-                {/* {props.cartTotal.length ? <p>Your cart is empty</p> : null} */}
-                <h2>Total: $</h2>
-                <CardInfo/>
-                <button onClick={() => clearCart}>Clear cart</button>
+                {props.cartTotal.length ? <p>Your cart is empty </p> : 
+                    <>
+                    <h2>Your Cart</h2>
+                        <h2>Total: $</h2>
+                        <CardInfo/>
+                        <button onClick={() => clearCart}>Clear cart</button>
+                    </>
+                }
             </div>
         </>
     )
