@@ -66,6 +66,10 @@ h5 {
   text-align: center;
 }
 
+.cart {
+  
+}
+
 @media only screen and (min-width: 600px){
   .stock-page{
     display: flex;
