@@ -6,11 +6,10 @@ const Cart = (props) => {
     
     const [cart, setCart] = useState([])
 
-    /* calculate total and pass to CartItem
-    const calculateTotal = () => {
-
+    /* calculate total items' price and pass to CartItem */
+    const calculateTotal = (items) => {
+        return items.price.reduce((sum, value) => {return sum + value}, 0 )
     }
-     */
 
     const clearCart = () => {
         setCart([cart.length === 0])
@@ -30,7 +29,7 @@ const Cart = (props) => {
                 {props.cartTotal.length ? <p>Your cart is empty </p> : 
                     <>
                     <h2>Your Cart</h2>
-                        <h2>Total: $</h2>
+                        <h2>Total: ${calculateTotal()}</h2>
                         <CardInfo/>
                         <button onClick={() => clearCart}>Clear cart</button>
                     </>
