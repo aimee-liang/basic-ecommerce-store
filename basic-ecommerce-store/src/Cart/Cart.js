@@ -8,7 +8,7 @@ const Cart = (props) => {
 
     /* calculate total items' price and pass to CartItem */
     const calculateTotal = (items) => {
-        return items.price.reduce((sum, value) => {return sum + value}, 0 )
+        return items.price.reduce((sum, value) => {return sum + value}, 0)
     }
 
     const clearCart = () => {
@@ -21,7 +21,10 @@ const Cart = (props) => {
 
     */
 
-    // const decreaseQuantity = () => decrease quantity
+    /* decrease quantity */
+    // const decreaseQuantity = () => {
+
+    // }
 
     return (
         <>
