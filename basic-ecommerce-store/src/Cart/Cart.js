@@ -34,6 +34,7 @@ const Cart = (props) => {
                 {props.cartTotal.length ? <p>Your cart is empty </p> : 
                     <>
                     <h2>Your Cart</h2>
+                        <CartItem />
                         <h2>Total: ${calculateTotal()}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
