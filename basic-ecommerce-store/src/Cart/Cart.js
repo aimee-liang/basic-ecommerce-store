@@ -8,7 +8,6 @@ const Cart = (props) => {
 
     /* calculate total items' price and pass to CartItem */
     const calculateTotal = ([...items]) => {
-        // console.log("calculate total")
         return items["price"].reduce((sum, value) => {return sum + value}, 0)
     }
 
@@ -33,7 +32,7 @@ const Cart = (props) => {
                 {props.cartTotal.length ? <p>Your cart is empty </p> : 
                     <>
                     <h2>Your Cart</h2>
-                        <CartItem />
+                        {/* need to display each item in cart, so forEach? Map? */}<CartItem />
                         <h2>Total: ${calculateTotal()}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
