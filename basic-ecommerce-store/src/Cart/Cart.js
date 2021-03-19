@@ -7,14 +7,13 @@ const Cart = (props) => {
     const [cart, setCart] = useState([])
 
     /* calculate total items' price and pass to CartItem */
-    const calculateTotal = (items) => {
+    const calculateTotal = ([...items]) => {
         // console.log("calculate total")
-        return items.price.reduce((sum, value) => {return sum + value}, 0)
+        return items["price"].reduce((sum, value) => {return sum + value}, 0)
     }
 
     const clearCart = () => {
         setCart([cart.length === 0])
-        // console.log("hi")
     }
 
     /* const increaseQuantity = () => {
