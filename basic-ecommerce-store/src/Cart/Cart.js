@@ -25,13 +25,15 @@ const Cart = (props) => {
 
     // }
 
+    const renderItems = props.total.map((item, index) => <CartItem key={index} item={item} />)
+
     return (
         <>
             <div className="cart">
                 {props.cartTotal.length ? <p>Your cart is empty </p> : 
                     <>
                     <h2>Your Cart</h2>
-                        {/* need to display each item in cart, so forEach? Map? */}<CartItem />
+                        {renderItems}
                         <h2>Total: ${calculateTotal()}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
