@@ -6,6 +6,7 @@ const Cart = (props) => {
     
     const [cart, setCart] = useState([])
 
+    /* has parameters here but none in return statement */
     const calculateTotal = ([...items]) => {
         return items["price"].reduce((sum, value) => {return sum + value}, 0)
     }
