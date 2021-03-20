@@ -6,7 +6,6 @@ const Cart = (props) => {
     
     const [cart, setCart] = useState([])
 
-    /* calculate total items' price and pass to CartItem */
     const calculateTotal = ([...items]) => {
         return items["price"].reduce((sum, value) => {return sum + value}, 0)
     }
