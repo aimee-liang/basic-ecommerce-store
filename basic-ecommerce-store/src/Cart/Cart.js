@@ -15,13 +15,11 @@ const Cart = (props) => {
         setCart([cart.length === 0])
     }
 
-    /* const increaseQuantity = () => {
+    const increaseQuantity = ([...items]) => {
         
     }
 
-    */
-
-    const decreaseQuantity = () => {
+    const decreaseQuantity = ([...items]) => {
         console.log("working on this")
     }
 
