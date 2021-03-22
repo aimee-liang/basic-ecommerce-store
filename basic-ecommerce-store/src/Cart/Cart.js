@@ -16,7 +16,8 @@ const Cart = (props) => {
     }
 
     const increaseQuantity = ([...items]) => {
-        
+        // filter through items to match the one clicked
+        // increase quantity
     }
 
     const decreaseQuantity = ([...items]) => {
