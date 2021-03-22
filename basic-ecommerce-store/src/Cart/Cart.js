@@ -34,7 +34,7 @@ const Cart = (props) => {
                     <>
                     <h2>Your Cart</h2>
                         {renderItems}
-                        <h2>Total: ${calculateTotal()}</h2>
+                        <h2>Total: ${calculateTotal(cart)}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
                         <button onClick={decreaseQuantity}>-</button>
