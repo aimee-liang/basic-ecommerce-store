@@ -14,12 +14,13 @@ const Cart = (props) => {
         setCart([cart.length === 0])
     }
 
-    const increaseQuantity = ([...items]) => {
-        return items.filter((key) => {
-            if (item.key === )
+    /* take in items and key of item that has been clicked on */
+    const increaseQuantity = (items, key) => {
+        items.filter((item) => {
+            if (item.key === key){
+                return item["price"] * 2 && parseInt(item["quantity"]) + 1
+            }
         })
-        // filter through items to match the one clicked
-        // increase quantity
     }
 
     const decreaseQuantity = ([...items]) => {
@@ -38,6 +39,7 @@ const Cart = (props) => {
                         <h2>Total: ${calculateTotal(cart)}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
+                        <button onClick={increaseQuantity}
                         <button onClick={decreaseQuantity}>-</button>
                     </>
                 }
