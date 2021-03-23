@@ -6,7 +6,6 @@ const Cart = (props) => {
     
     const [cart, setCart] = useState([])
 
-    /* has parameters here but none in return statement */
     const calculateTotal = ([...items]) => {
         return items["price"].reduce((sum, value) => {return sum + value}, 0)
     }
@@ -16,6 +15,9 @@ const Cart = (props) => {
     }
 
     const increaseQuantity = ([...items]) => {
+        return items.filter((key) => {
+            if (item.key === )
+        })
         // filter through items to match the one clicked
         // increase quantity
     }
