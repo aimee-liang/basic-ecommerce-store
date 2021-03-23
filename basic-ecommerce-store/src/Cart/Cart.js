@@ -5,6 +5,7 @@ import CartItem from "./CartItem"
 const Cart = (props) => {
     
     const [cart, setCart] = useState([])
+    const [key, setKey] = useState()
 
     const calculateTotal = ([...items]) => {
         return items["price"].reduce((sum, value) => {return sum + value}, 0)
@@ -16,7 +17,7 @@ const Cart = (props) => {
 
     /* take in items and key of item that has been clicked on */
     const increaseQuantity = (items, key) => {
-        items.filter((item) => {
+        return items.filter((item) => {
             if (item.key === key){
                 return item["price"] * 2 && parseInt(item["quantity"]) + 1
             }
@@ -39,7 +40,7 @@ const Cart = (props) => {
                         <h2>Total: ${calculateTotal(cart)}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
-                        <button onClick={increaseQuantity}
+                        <button onClick={increaseQuantity}>+</button>
                         <button onClick={decreaseQuantity}>-</button>
                     </>
                 }
