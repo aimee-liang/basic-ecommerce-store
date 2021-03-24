@@ -25,7 +25,10 @@ const Cart = (props) => {
     }
 
     const decreaseQuantity = (items, key) => {
-        
+        console.log("working on")
+        // items.filter((item) => {
+        //     if 
+        // })
     }
 
     const renderItems = props.total.map((item, index) => <CartItem key={index} item={item} />)
