@@ -24,7 +24,7 @@ const Cart = (props) => {
         })
     }
 
-    const decreaseQuantity = ([...items]) => {
+    const decreaseQuantity = (items) => {
         console.log("working on this")
     }
 
