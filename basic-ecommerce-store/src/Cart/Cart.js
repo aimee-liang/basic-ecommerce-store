@@ -20,7 +20,7 @@ const Cart = (props) => {
         setKey(key)
         items.filter((item) => {
             if (item.key === key){
-                return item["price"] * 2 && parseInt(item["quantity"]) + 1
+                return parseInt(item["price"] * 2) && parseInt(item["quantity"] + 1)
             } 
         })
     }
@@ -29,7 +29,8 @@ const Cart = (props) => {
         setKey(key)
         items.filter((item) => {
             if (item.key === key){
-                return item["price"] - 
+                let amt = item["price"]
+                return parseInt(item["price"] -= amt) && parseInt(item["quantity"] - 1)
             }
         })
     }
