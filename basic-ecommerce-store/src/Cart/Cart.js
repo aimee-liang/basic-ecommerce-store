@@ -17,6 +17,7 @@ const Cart = (props) => {
 
     /* take in items and key of item that has been clicked on */
     const increaseQuantity = (items, key) => {
+        setKey(key)
         items.filter((item) => {
             if (item.key === key){
                 return item["price"] * 2 && parseInt(item["quantity"]) + 1
@@ -25,10 +26,12 @@ const Cart = (props) => {
     }
 
     const decreaseQuantity = (items, key) => {
-        console.log("working on")
-        // items.filter((item) => {
-        //     if 
-        // })
+        setKey(key)
+        items.filter((item) => {
+            if (item.key === key){
+                return item["price"] - 
+            }
+        })
     }
 
     const renderItems = props.total.map((item, index) => <CartItem key={index} item={item} />)
@@ -43,7 +46,7 @@ const Cart = (props) => {
                         <h2>Total: ${calculateTotal(cart)}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
-                        <button onClick={increaseQuantity}>+</button>
+                        <button onClick={increaseQuantity(cart, item.key)}>+</button>
                         <button onClick={decreaseQuantity}>-</button>
                     </>
                 }
