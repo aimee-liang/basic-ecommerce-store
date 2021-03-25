@@ -35,7 +35,7 @@ const Cart = (props) => {
         })
     }
 
-    const renderItems = props.total.map((item, index) => <CartItem key={index} item={item} />)
+    // const renderItems = props.total.map((item, index) => <CartItem key={index} item={item} />)
 
     return (
         <>
@@ -43,12 +43,12 @@ const Cart = (props) => {
                 {props.cartTotal.length ? <p>Your cart is empty </p> : 
                     <>
                     <h2>Your Cart</h2>
-                        {renderItems}
+                        {/* {renderItems} */}
                         <h2>Total: ${calculateTotal(cart)}</h2>
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
-                        <button onClick={increaseQuantity(cart, item.key)}>+</button>
-                        <button onClick={decreaseQuantity(cart, item.key)}>-</button>
+                        <button onClick={increaseQuantity(cart)}>+</button>
+                        <button onClick={decreaseQuantity(cart)}>-</button>
                     </>
                 }
             </div>
