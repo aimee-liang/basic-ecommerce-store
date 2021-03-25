@@ -47,7 +47,7 @@ const Cart = (props) => {
                         <CardInfo/>
                         <button onClick={clearCart}>Clear cart</button>
                         <button onClick={increaseQuantity(cart, item.key)}>+</button>
-                        <button onClick={decreaseQuantity}>-</button>
+                        <button onClick={decreaseQuantity(cart, item.key)}>-</button>
                     </>
                 }
             </div>
