@@ -12,6 +12,7 @@ const App = () => {
   const updateTotal = (item) => setTotal([...item]) /* item is an object in an array to show price and quant. */
   const [cartDisplay, setCartDisplay] = useState(false)
 
+  /* fetch API */
 
   return (
     <>
