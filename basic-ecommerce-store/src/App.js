@@ -10,7 +10,7 @@ const App = () => {
   const [total, setTotal] = useState([]) 
   const [inStock, setInStock] = useState([])
   
-  const updateTotal = (item) => setTotal([...item]) /* item is an object in an array to show price and quant. */
+  const updateTotal = (item) => setTotal(item)
   const [cartDisplay, setCartDisplay] = useState(false)
 
   useEffect(() => {
@@ -24,11 +24,15 @@ const App = () => {
       .catch(error => console.log(error))
   }
 
+  const calcTotal = () => {
+    console.log(total)
+  }
 
   return (
     <>
+    {console.log(total)}
       <Logo />
-      <Stock inStock={inStock}/>
+      <Stock inStock={inStock} updateTotal={updateTotal} />
       {/* <ShoppingCartIcon onClick={setCartDisplay(true)} />
       {cartDisplay ? 
         <Cart cartTotal={[...total]}/> 
