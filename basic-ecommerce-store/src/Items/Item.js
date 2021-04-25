@@ -6,8 +6,9 @@ const Item = (props) => {
     return (
         <>
             <h4>{props.data.title}</h4>
+            <img alt='{props.data.title}' src={props.data.image} />
             <h5>{props.data.price}</h5>
-            <img alt="" src={props.data.image} />
+            <Button variant="contained" color="primary">Add To Cart</Button>
             {/* <div className="item">
                 <h3>Amethyst Pendant</h3>
                 <img src="/pexels-photo-965981.jpeg" alt="jewelry piece"/>

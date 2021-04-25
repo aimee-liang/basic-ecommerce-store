@@ -8,8 +8,8 @@ const Stock = (props) => {
         props.updateTotal([...item])
     }
 
-    const renderInStockProps = props.inStock.map((stockItem, index) => {
-        <Item key={index} id={stockItem.id} data={stockItem} />
+    const renderInStockProps = props.inStock.map((stockItem) => {
+        <Item key={stockItem.id} id={stockItem.id} data={stockItem} />
     })
 
     return (
