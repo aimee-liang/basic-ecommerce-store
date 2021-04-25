@@ -35,8 +35,8 @@ const App = () => {
           : 
         null 
       } */}
-      <h4>Website design by <a href="https://aimeeliang.com">Aimee Liang</a></h4>
-      <h5>Please note this is a demo app. Do not enter your actual payment information.</h5>
+      <h4 style={{marginTop: "5%", textAlign: "center"}}>Website design by <a href="https://aimeeliang.com">Aimee Liang</a></h4>
+      <h4 style={{marginTop: "2%", textAlign: "center"}}>Do not enter your actual payment information.</h4>
     </>
   );
 }

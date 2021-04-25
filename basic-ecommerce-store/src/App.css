@@ -46,20 +46,6 @@
   width: 15vw;
 }
 
-.item img{
-  height: 20vh;
-  min-width: 12vw;
-  padding: 5px 5px 5px 5px;
-}
-
-h4 {
-  text-align: center;
-}
-
-h5 {
-  text-align: center;
-}
-
 .cart {
   height: 100%;
   width: 0;
@@ -71,10 +57,4 @@ h5 {
   /* overflow-x: hidden; */
   padding-top: 50px;
   transition: 0.5s;
-}
-
-@media only screen and (min-width: 600px){
-  .stock-page{
-    display: flex;
-  }
 }
