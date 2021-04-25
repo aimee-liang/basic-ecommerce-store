@@ -1,5 +1,13 @@
 import React from "react"
 import Item from "./Item.js"
+import styled from 'styled-components'
+
+const StockWrapper = styled.div`
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    margin: auto;
+`
 
 const Stock = (props) => {
 
@@ -12,9 +20,9 @@ const Stock = (props) => {
     }
 
     return (
-        <>
-            {renderInStockProps}
-        </>
+        <StockWrapper>
+            {renderInStockProps()}
+        </StockWrapper>
     )
 }
 
