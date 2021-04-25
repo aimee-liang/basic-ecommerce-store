@@ -9,12 +9,13 @@ const StockWrapper = styled.div`
 
 const Stock = (props) => {
 
-    const localUpdate = ([...item]) => {
-        props.updateTotal([...item])
+    const localUpdate = (item) => {
+        // console.log(item)
+        props.updateTotal(item)
     }
 
     const renderInStockProps = () => { 
-        return props.inStock.map((stockItem) => <Item key={stockItem.id} id={stockItem.id} data={stockItem} />)
+        return props.inStock.map((stockItem) => <Item key={stockItem.id} id={stockItem.id} data={stockItem} localUpdate={localUpdate} />)
     }
 
     return (

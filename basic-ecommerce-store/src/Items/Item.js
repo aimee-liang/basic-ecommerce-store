@@ -11,13 +11,20 @@ const ItemWrapper = styled.div`
 
 const Item = (props) => {
 
+    const localClickHandler = () => {
+        props.localUpdate(props.data.id)
+    }
+
     return (
+        <>
+        {/* {console.log(props)} */}
         <ItemWrapper>
             <h3 style={{paddingTop: "5%", paddingBottom: "5%"}}>{props.data.title}</h3>
             <img alt='{props.data.title}' src={props.data.image} style={{height: "16vh", width: "10vw", padding: "5px 5px 5px 5px"}} />
             <h4>${props.data.price}</h4>
-            <Button variant="contained" color="primary" onClick={props.localUpdate}>Add To Cart</Button>
+            <Button variant="contained" color="primary" onClick={localClickHandler}>Add To Cart</Button>
         </ItemWrapper>
+        </>
     )
 }
 
