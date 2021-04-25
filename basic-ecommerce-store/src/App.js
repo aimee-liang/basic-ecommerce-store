@@ -33,6 +33,7 @@ const App = () => {
     {console.log(total)}
       <Logo />
       <Stock inStock={inStock} updateTotal={updateTotal} />
+      <Cart />
       {/* <ShoppingCartIcon onClick={setCartDisplay(true)} />
       {cartDisplay ? 
         <Cart cartTotal={[...total]}/> 
