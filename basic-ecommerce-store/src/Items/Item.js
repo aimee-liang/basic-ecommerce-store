@@ -5,7 +5,10 @@ const Item = (props) => {
 
     return (
         <>
-            <div className="item">
+            <h4>{props.data.title}</h4>
+            <h5>{props.data.price}</h5>
+            <img alt="" src={props.data.image} />
+            {/* <div className="item">
                 <h3>Amethyst Pendant</h3>
                 <img src="/pexels-photo-965981.jpeg" alt="jewelry piece"/>
                 <h5>$75.50</h5>
@@ -31,7 +34,7 @@ const Item = (props) => {
                 <img src="/pexels-photo-1670723.jpeg" alt="jewelry piece"/>
                 <h5>Add to cart for details</h5>
                 <Button variant="contained" onClick={props.localUpdate}>Click to purchase</Button>
-            </div>
+            </div> */}
         </>
     )
 }

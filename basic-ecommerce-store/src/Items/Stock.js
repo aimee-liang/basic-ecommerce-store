@@ -9,7 +9,7 @@ const Stock = (props) => {
     }
 
     const renderInStockProps = props.inStock.map((stockItem, index) => {
-        <Item key={index} data={stockItem} />
+        <Item key={index} id={stockItem.id} data={stockItem} />
     })
 
     return (
