@@ -7,10 +7,13 @@ const Stock = (props) => {
         props.updateTotal([...item])
     }
 
+    const renderInStockProps = props.inStock.map((stockItem) => {
+    )
+    }
+
     return (
-        <div className="stock-page">
-            <Item localUpdate={localUpdate} />
-        </div>
+        <>
+        </>
     )
 }
 
