@@ -1,5 +1,4 @@
 import React from "react"
-// import { render } from "react-dom"
 import Item from "./Item.js"
 
 const Stock = (props) => {
@@ -8,9 +7,9 @@ const Stock = (props) => {
         props.updateTotal([...item])
     }
 
-    const renderInStockProps = props.inStock.map((stockItem) => {
-        <Item key={stockItem.id} id={stockItem.id} data={stockItem} />
-    })
+    const renderInStockProps = () => { 
+        return props.inStock.map((stockItem) => <Item key={stockItem.id} id={stockItem.id} data={stockItem} />)
+    }
 
     return (
         <>

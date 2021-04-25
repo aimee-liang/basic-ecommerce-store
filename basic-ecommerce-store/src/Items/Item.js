@@ -5,10 +5,10 @@ const Item = (props) => {
 
     return (
         <>
-            <h4>{props.data.title}</h4>
+            <h3>{props.data.title}</h3>
             <img alt='{props.data.title}' src={props.data.image} />
-            <h5>{props.data.price}</h5>
-            <Button variant="contained" color="primary">Add To Cart</Button>
+            <h4>{props.data.price}</h4>
+            <Button variant="contained" color="primary" onClick={props.localUpdate}>Add To Cart</Button>
             {/* <div className="item">
                 <h3>Amethyst Pendant</h3>
                 <img src="/pexels-photo-965981.jpeg" alt="jewelry piece"/>
