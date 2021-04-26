@@ -30,8 +30,7 @@ const Cart = (props) => {
     return (
         <>
             <h2>Your Cart</h2>
-                {/* {renderItems} */}
-                <h2>Total: $</h2>
+                <h3>Total: $</h2>
                 <CardInfo/>
                 <Button>Clear cart</Button>
         </>
