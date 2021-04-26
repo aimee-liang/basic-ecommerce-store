@@ -13,9 +13,9 @@ const Cart = (props) => {
         fetchAndRenderCartItems()
     }, [])
 
-    // const clearCart = () => {
-    //     setCart([cart.length === 0])
-    // }
+    const clearCart = () => {
+        setFilteredCart([])
+    }
 
     const fetchAndRenderCartItems = () => {
         fetch('https://fakestoreapi.com/products')
@@ -23,16 +23,17 @@ const Cart = (props) => {
             .then(data => setCart(data))
             .catch(error => console.log(error))
         let filtered = cart.filter((item) => {
-            return item.id === total
+            return item.id === props.total
         })
+        setFilteredCart(filtered)
     }
 
     return (
         <>
             <h2>Your Cart</h2>
-                <h3>Total: $</h2>
+                <h3>Total: $</h3>
                 <CardInfo/>
-                <Button>Clear cart</Button>
+                <Button variant="contained" color="secondary" onClick={clearCart}>Clear cart</Button>
         </>
     )
 }

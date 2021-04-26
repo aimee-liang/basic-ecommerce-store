@@ -30,7 +30,6 @@ const App = () => {
 
   return (
     <>
-    {console.log(total)}
       <Logo />
       <Stock inStock={inStock} updateTotal={updateTotal} />
       <Cart />
