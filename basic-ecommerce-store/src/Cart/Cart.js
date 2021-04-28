@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button"
 import styled from "styled-components"
 
 const CartWrapper = styled.div`
-    
+
 `
 
 const Cart = (props) => {
@@ -36,6 +36,17 @@ const Cart = (props) => {
         return filteredCart.map((purchasingItem) => {
             <CartItem />
         })
+    }
+
+    const increaseQuantity = () => {
+
+    }
+
+    const decreaseQuantity = () => {
+        
+    }
+
+    const cartTotal = () => {
     }
 
     return (

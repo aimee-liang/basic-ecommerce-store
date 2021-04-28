@@ -7,7 +7,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const App = () => {
 
-  const [total, setTotal] = useState([]) 
+  const [total, setTotal] = useState([]) /* how to handle having clicked on more than one item? */
   const [inStock, setInStock] = useState([])
   
   const updateTotal = (item) => setTotal(item)
