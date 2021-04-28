@@ -33,9 +33,7 @@ const Cart = (props) => {
     }
 
     const renderFilteredCart = () => {
-        return filteredCart.map((purchasingItem) => {
-            <CartItem />
-        })
+        return filteredCart.map((purchasingItem) => <CartItem purchasingItem={purchasingItem} /> )
     }
 
     const increaseQuantity = () => {
@@ -43,16 +41,18 @@ const Cart = (props) => {
     }
 
     const decreaseQuantity = () => {
-        
+
     }
 
     const cartTotal = () => {
+        // use reduce
     }
 
     return (
         <>
             <h2>Your Cart</h2>
-                <h3>Total: $</h3>
+
+                <h3>Total: ${}</h3>
                 <CardInfo/>
                 <Button variant="contained" color="secondary" onClick={clearCart}>Clear cart</Button>
         </>
