@@ -4,13 +4,17 @@ import CartItem from "./CartItem"
 import Button from "@material-ui/core/Button"
 import styled from "styled-components"
 
+const CartWrapper = styled.div`
+    
+`
+
 const Cart = (props) => {
     
     const [cart, setCart] = useState([])
     const [filteredCart, setFilteredCart] = useState([])
 
     useEffect(() => {
-        fetchAndRenderCartItems()
+        fetchAndRenderCartItems() /* renderFilteredCart ? */
     }, [])
 
     const clearCart = () => {
@@ -26,6 +30,12 @@ const Cart = (props) => {
             return item.id === props.total
         })
         setFilteredCart(filtered)
+    }
+
+    const renderFilteredCart = () => {
+        return filteredCart.map((purchasingItem) => {
+            <CartItem />
+        })
     }
 
     return (
