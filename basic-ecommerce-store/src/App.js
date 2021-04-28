@@ -30,9 +30,10 @@ const App = () => {
 
   return (
     <>
+    {/* {console.log("Total:", total)} */}
       <Logo />
       <Stock inStock={inStock} updateTotal={updateTotal} />
-      <Cart />
+      <Cart total={total} />
       {/* <ShoppingCartIcon onClick={setCartDisplay(true)} />
       {cartDisplay ? 
         <Cart cartTotal={[...total]}/> 

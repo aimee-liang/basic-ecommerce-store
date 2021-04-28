@@ -50,6 +50,7 @@ const Cart = (props) => {
 
     return (
         <>
+        {console.log(filteredCart)}
             <h2>Your Cart</h2>
 
                 <h3>Total: ${}</h3>
