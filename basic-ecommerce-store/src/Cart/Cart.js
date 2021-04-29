@@ -50,9 +50,10 @@ const Cart = (props) => {
 
     return (
         <>
-        {console.log(filteredCart)}
+        {/* {console.log(cart)} */}
+        {/* {console.log(props.total)} */}
             <h2>Your Cart</h2>
-
+                {renderFilteredCart}
                 <h3>Total: ${}</h3>
                 <CardInfo/>
                 <Button variant="contained" color="secondary" onClick={clearCart}>Clear cart</Button>
