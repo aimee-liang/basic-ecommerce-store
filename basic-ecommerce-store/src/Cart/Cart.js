@@ -48,6 +48,10 @@ const Cart = (props) => {
         // use reduce
     }
 
+    const removeItem = () => {
+        
+    }
+
     return (
         <>
         {/* {console.log(cart)} */}

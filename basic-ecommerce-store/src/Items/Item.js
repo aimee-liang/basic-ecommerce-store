@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button"
 import styled from 'styled-components'
 
 const ItemWrapper = styled.div`
-    height: 28vh;
+    height: 30vh;
     width: 25vw;
     text-align: center;
     padding-bottom: 5%;
