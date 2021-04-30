@@ -5,7 +5,12 @@ import Button from "@material-ui/core/Button"
 import styled from "styled-components"
 
 const CartWrapper = styled.div`
-
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
 `
 
 const Cart = (props) => {
