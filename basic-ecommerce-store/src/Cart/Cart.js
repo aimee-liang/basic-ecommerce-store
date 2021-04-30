@@ -5,15 +5,15 @@ import Button from "@material-ui/core/Button"
 import styled from "styled-components"
 
 const CartWrapper = styled.div`
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
+    // height: 100%;
+    // width: 0;
+    // position: fixed;
+    // z-index: 1;
+    // top: 0;
+    // right: 0;
+    // overflow-x: hidden;
+    // padding-top: 60px;
+    // transition: 0.5s;
 `
 
 const Cart = (props) => {
@@ -22,7 +22,7 @@ const Cart = (props) => {
     const [filteredCart, setFilteredCart] = useState([])
 
     useEffect(() => {
-        fetchAndRenderCartItems() /* renderFilteredCart ? */
+        fetchAndRenderCartItems()
     }, [])
 
     const clearCart = () => {
@@ -35,9 +35,12 @@ const Cart = (props) => {
             .then(data => setCart(data))
             .catch(error => console.log(error))
         let filtered = cart.filter((item) => {
-            return item.id === props.total
+            if (item.id === props.total){
+                return item
+            }
         })
-        setFilteredCart(filtered)
+        console.log(filtered)
+        // setFilteredCart(filtered)
     }
 
     const renderFilteredCart = () => {
@@ -61,15 +64,15 @@ const Cart = (props) => {
     }
 
     return (
-        <>
-        {/* {console.log(cart)} */}
+        <CartWrapper>
+        {console.log(props.total)}
         {/* {console.log(props.total)} */}
             <h2>Your Cart</h2>
-                {renderFilteredCart}
+                {renderFilteredCart()}
                 <h3>Total: ${}</h3>
                 <CardInfo/>
                 <Button variant="contained" color="secondary" onClick={clearCart}>Clear cart</Button>
-        </>
+        </CartWrapper>
     )
 }
 
