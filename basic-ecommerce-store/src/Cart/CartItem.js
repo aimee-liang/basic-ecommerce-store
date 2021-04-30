@@ -2,6 +2,10 @@ import React from "react"
 import Button from "@material-ui/core/Button"
 import styled from 'styled-components'
 
+const CartItemWrapper = styled.div`
+    height: 15vh;
+`
+
 const CartItem = (props) => {
 
     const localRemove = () => {
@@ -20,13 +24,14 @@ const CartItem = (props) => {
     }
 
     return(
-        <>
+        <CartItemWrapper>
             <h6>{props.purchasingItem.title}</h6>
             <img alt="" src={props.purchasingItem.image}/>
             <p>{props.purchasingItem.price}</p>
             <button>+</button>
             <button>-</button>
-        </>
+            <button onClick={localRemove}>Remove Item from Cart</button>
+        </CartItemWrapper>
     )
 }
 
