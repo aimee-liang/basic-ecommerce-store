@@ -11,6 +11,9 @@ const CartWrapper = styled.div`
     z-index: 1;
     top: 0;
     right: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
 `
 
 const Cart = (props) => {
