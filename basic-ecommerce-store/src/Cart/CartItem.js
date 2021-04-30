@@ -30,7 +30,7 @@ const CartItem = (props) => {
             <p>{props.purchasingItem.price}</p>
             <button>+</button>
             <button>-</button>
-            <button onClick={localRemove}>Remove Item from Cart</button>
+            <Button variant="contained" color="secondary" onClick={localRemove}>Remove Item from Cart</Button>
         </CartItemWrapper>
     )
 }
