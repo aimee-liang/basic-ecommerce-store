@@ -21,7 +21,11 @@ const CartItem = (props) => {
 
     return(
         <>
-            <
+            <h6>{props.purchasingItem.title}</h6>
+            <img alt="" src={props.purchasingItem.image}/>
+            <p>{props.purchasingItem.price}</p>
+            <button>+</button>
+            <button>-</button>
         </>
     )
 }

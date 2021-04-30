@@ -39,8 +39,7 @@ const Cart = (props) => {
                 return item
             }
         })
-        console.log(filtered)
-        // setFilteredCart(filtered)
+        setFilteredCart(filtered)
     }
 
     const renderFilteredCart = () => {
@@ -66,7 +65,6 @@ const Cart = (props) => {
     return (
         <CartWrapper>
         {console.log(props.total)}
-        {/* {console.log(props.total)} */}
             <h2>Your Cart</h2>
                 {renderFilteredCart()}
                 <h3>Total: ${}</h3>
