@@ -20,6 +20,7 @@ const Cart = (props) => {
     
     const [cart, setCart] = useState([])
     const [filteredCart, setFilteredCart] = useState([])
+    const [quantity, setQuantity] = useState(0)
 
     useEffect(() => {
         fetchAndRenderCartItems()

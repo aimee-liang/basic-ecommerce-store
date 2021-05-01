@@ -26,8 +26,8 @@ const CartItem = (props) => {
             <h6>{props.purchasingItem.title}</h6>
             <img alt="" src={props.purchasingItem.image}/>
             <p>{props.purchasingItem.price}</p>
-            <button>+</button>
-            <button>-</button>
+            <button onClick={localIncrease}>+</button>
+            <button onClick={localDecrease}>-</button>
             <Button variant="contained" color="secondary" onClick={localRemove}>Remove Item from Cart</Button>
         </CartItemWrapper>
     )
