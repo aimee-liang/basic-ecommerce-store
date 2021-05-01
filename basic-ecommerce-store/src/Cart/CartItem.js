@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button"
 import styled from 'styled-components'
 
 const CartItemWrapper = styled.div`
-    height: 15vh;
+    height: 5vh;
 `
 
 const CartItem = (props) => {
@@ -15,12 +15,10 @@ const CartItem = (props) => {
 
     const localIncrease = () => {
         // props.increaseQuantity()
-            /* some kind of confirmation or popup you've increased quantity? with timeout? */
     }
 
     const localDecrease = () => {
         // props.decreaseQuantity()
-            /* some kind of confirmation or popup you've decreased quantity? with timeout? */
     }
 
     return(
