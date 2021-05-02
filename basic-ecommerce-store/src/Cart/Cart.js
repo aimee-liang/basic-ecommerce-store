@@ -44,11 +44,11 @@ const Cart = (props) => {
     }
 
     const renderFilteredCart = () => {
-        return filteredCart.map((purchasingItem) => <CartItem purchasingItem={purchasingItem} /> )
+        return filteredCart.map((purchasingItem) => <CartItem purchasingItem={purchasingItem} quantity={quantity} />)
     }
 
     const increaseQuantity = () => {
-
+        setQuantity(quantity++)
     }
 
     const decreaseQuantity = () => {
