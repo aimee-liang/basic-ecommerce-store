@@ -62,12 +62,13 @@ const Cart = (props) => {
     }
 
     const removeItem = () => {
-        
+        let removeFromMyCart = filteredCart.filter((item) => {
+            
+        })
     }
 
     return (
         <CartWrapper>
-        {console.log(props.total)}
             <h2>Your Cart</h2>
                 {renderFilteredCart()}
                 <h3>Total: ${}</h3>
