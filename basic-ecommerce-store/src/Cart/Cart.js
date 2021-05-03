@@ -61,9 +61,9 @@ const Cart = (props) => {
         // use reduce
     }
 
-    const removeItem = () => {
+    const removeItem = (data) => {
         let removeFromMyCart = filteredCart.filter((item) => {
-            
+            if ()
         })
     }
 
