@@ -37,9 +37,7 @@ const Cart = (props) => {
             .then(data => setCart(data))
             .catch(error => console.log(error))
         let filtered = cart.filter((item) => {
-            if (item.id === props.total){
-                return item
-            }
+            return (item.id === props.total)
         })
         setFilteredCart(filtered)
     }
