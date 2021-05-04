@@ -63,7 +63,9 @@ const Cart = (props) => {
 
     const removeItem = (data) => {
         let removeFromMyCart = filteredCart.filter((item) => {
-            if ()
+            if (item.id === data){
+                
+            }
         })
     }
 
