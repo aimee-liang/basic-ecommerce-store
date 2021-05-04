@@ -63,10 +63,9 @@ const Cart = (props) => {
 
     const removeItem = (data) => {
         let removeFromMyCart = filteredCart.filter((item) => {
-            if (item.id === data){
-                
-            }
+            return (item.id !== data)
         })
+        setRemoveFromCart(removeFromMyCart)
     }
 
     return (
