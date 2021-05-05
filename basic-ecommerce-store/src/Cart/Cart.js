@@ -20,7 +20,7 @@ const Cart = (props) => {
     
     const [cart, setCart] = useState([])
     const [filteredCart, setFilteredCart] = useState([])
-    const [removeFromCart, setRemoveFromCart] = useState([])
+    // const [removeFromCart, setRemoveFromCart] = useState([])
     const [quantity, setQuantity] = useState(0)
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const Cart = (props) => {
 
     const renderFilteredCart = () => {
         return filteredCart.map((purchasingItem) => <CartItem purchasingItem={purchasingItem} quantity={quantity} increaseQuantity={increaseQuantity} 
-            decreaseQuantity={decreaseQuantity} removeFromCart={removeFromCart} />)
+            decreaseQuantity={decreaseQuantity} removeFromCart={removeItem} />)
     }
 
     const cartTotal = () => {
@@ -64,7 +64,8 @@ const Cart = (props) => {
         let removeFromMyCart = filteredCart.filter((item) => {
             return (item.id !== data)
         })
-        setRemoveFromCart(removeFromMyCart)
+        setFilteredCart(removeFromMyCart)
+        // setRemoveFromCart(removeFromMyCart)
     }
 
     return (
