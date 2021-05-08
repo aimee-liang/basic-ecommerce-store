@@ -8,8 +8,8 @@ const CartItemWrapper = styled.div`
 
 const CartItem = (props) => {
 
-    const localRemove = () => {
-        props.removeItem()
+    const localRemove = (data) => {
+        props.removeItem(data)
         // return <p>"You've removed this item from your cart</p>
     }
 
@@ -17,8 +17,8 @@ const CartItem = (props) => {
         props.increaseQuantity()
     }
 
-    const localDecrease = (data) => {
-        props.decreaseQuantity(data)
+    const localDecrease = () => {
+        props.decreaseQuantity()
     }
 
     return(

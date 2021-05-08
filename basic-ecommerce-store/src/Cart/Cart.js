@@ -69,6 +69,8 @@ const Cart = (props) => {
     }
 
     return (
+        <>
+        {console.log(filteredCart)}
         <CartWrapper>
             <h2>Your Cart</h2>
                 {renderFilteredCart()}
@@ -76,6 +78,7 @@ const Cart = (props) => {
                 <CardInfo/>
                 <Button variant="contained" color="secondary" onClick={clearCart}>Clear cart</Button>
         </CartWrapper>
+        </>
     )
 }
 
